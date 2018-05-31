@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Application con Sockets</title>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	<h1>My app</h1>
+	<div id="messages"></div>
+	<br/>
+	<form onsubmit="return addMessage(this)">
+		<!--<input type="text" id="username" placeholder="Tu nombre">-->
+		<select name="channel" id="channel" onchange="selectChange()">
+			<option value="shinigamis">Shinigamis</option>
+			<option selected value="noshinigamis">No shinigamis</option>
+		</select>
+		<input type="text" id="txt" placeholder="Cuentanos algo">
+		<input type="submit" value="Enviar">
+	</form>
+	
+</body>
+</html>
